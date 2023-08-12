@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome || Home Page</title>
+</head>
+<body>
+        <header>
+            <img src="images/logo.png" alt="My Logo Image" id="logo">
+            <center>
+                <form action="search_service.php" method="get" class="searchView" id="searchView">
+                    <input type="text" name="id" id="" placeholder="Search service here" required><br>
+                    <button type="submit" class="search">search</button>
+                </form>
+            </center>
+            <style>
+                @media(max-width:768px){
+                    header img{
+                        width:100%;
+                    }
+                    header #logo{
+                        height: 150px;
+                        width: 100%;
+                    }
+                    .searchView input{
+                        width: 400px;
+                    }
+                    header .searchView{
+                        margin-left: 10%;
+                        margin-top: 26%;
+                    }
+                    .search{
+                        background-color: blue;
+                    }
+                    #my-sub-header{
+                        position: absolute;
+                        top: 27%;
+                        left: 53%;
+                    }
+                    #droper{
+                        position: absolute;
+                        top: 34%;
+                        left:53%
+                    }
+                    
+                    #btn1{
+                        font-size: 16px;
+                    }
+                    .navbars{
+                        text-decoration: none;
+                        margin-top: 30%;
+                    }
+                    .navbars a{
+                        padding-left: 0px;
+                        display: block;
+                    }
+                    .navigation-bars a{
+                        display: block;
+                    }
+                    .display-all a{
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        text-align: center;
+                        font-size: 30px;
+                    }
+                    .display-all{
+                        width: 50px;
+                        text-decoration: none;
+                        padding: 7px;
+                        background-size: contain;
+                        text-align: center;
+                        border: 1px solid black;
+                        margin-top: 19%;
+                        margin-left: -15%;
+                        background-color: blue;
+                    }
+                    .display-all:hover .navbars{
+                        display: block;
+                    }
+                    
+                }
+                *{
+                    box-sizing: border-box;
+                    padding: 0%;
+                    margin: 0%;
+                }
+                header img{
+                    margin-left: 0.5%;
+                    border: 1px solid green;
+                    height: 100px;
+                    width: 300px;
+                }
+                header form{
+                   position: absolute;
+                   top: 3%;
+                   margin-left: 30%;
+                }
+                header{
+                    width: 100%;
+                }
+                header form input{
+                    font-size: 18px;
+                    text-align: center;
+                    width: 500px;
+                    height: 50px;
+                }
+                header form button{
+                    position: absolute;
+                    cursor: pointer;
+                    left: 86%;
+                    background-color: orange;
+                    top: 1%;
+                    width: 70px;
+                    height: 50px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 20px;
+                }
+                .sub-header a{
+                    padding-right: 0%;
+                    font-size: 18px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    text-decoration: none;
+                    display: inline;
+                }
+                .sub-header{
+                    position: absolute;
+                    right: 10%;
+                    top: 3%;
+                }
+                .dropdown{
+                    background-color: orange
+                    margin-right: 0%;
+                    width: 200px;
+                    font-size: 16px;
+                    height: 50px;
+                }
+                .dropdown:hover{
+                    background-color: #ddd;
+                }
+                .drop{
+                    position: absolute;
+                    left: 77%;
+                    top: 9%;
+                    display: none;
+                    text-align: center;
+                    width: 200px;
+                    background-color: #333;
+                    color: #FFFFFF;
+                    padding: 10px;
+                }
+                .drop a{
+                    padding: 10px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color: #FFFFFF;
+                    display: block;
+                }
+                .active{
+                    display: block;
+                }
+                #line{width: 100%;
+                }
+                .sub-header button{
+                    background-color: orange;
+                }
+                
+                #show{
+                    color: blue;
+                    font-size: 0px;
+                    position: absolute;
+                    top: 15%;
+                    display: none;
+                    left: 25%;
+                }
+                .active{
+                    display: block;
+                }
+            </style>
+            <script>
+                var button6=document.querySelector('.display-all');
+                var holder6=document.querySelector('.navbars');
+                var container=document.querySelector('.drop');
+                button6.addEventListener('click',function(){
+                    //container.style.display='none';
+                    holder6.classList.toggle('active');
+                });
+            </script>
+            <div class="sub-header" id="my-sub-header">
+                <button class="dropdown" id="btn1"><a href="#"></a>Customers Management</a></button>
+            </div>
+            <div class="drop" id="droper">
+                <a href="#" class="user-login">Login</a><hr>
+                <a href="#" class="user-registration">Register</a>
+            </div>
+            <script>
+                var button=document.querySelector('.dropdown');
+                var container=document.querySelector('.drop');
+                var holder6=document.querySelector('.navbars');
+                button.addEventListener('click',function(){
+                    //holder6.style.display='none';
+                    container.classList.toggle('active');
+                });
+            </script>
+        </header>
+        <!--<button class="show" id="drop_menu">&#9776;</button>-->
+        <hr id="line">
+        <center>
+            <div class="display-all"  id="show">
+               
+            </div>
+            <center>
+            <div class="navbars" id="navbars">
+                <a href="#" class="drop0" id="drop0">Home</a>
+                <a href="#" class="drop1" id="drop1">Our Services</a>
+                <a href="#" class="drop2" id="drop2">About Us</a>
+                <a href="#" class="drop3" id="drop3">Staff</a>
+                <a href="#" class="drop4" id="drop4">Contact Us</a>
+            </div>
+            <style>
+            @media(max-width:820px){
+                #registration{
+                    margin-left: 0%;
+                    margin-top: -10%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #registration input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #registration select{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #myform p{
+                    font-size: 18px;
+                }
+                #myform{
+                    margin-left: 0%;
+                    margin-top: -10%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #myform input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #navbars{
+                    width:100%
+                }
+                #Imageslider{
+                    width:100%;
+                }
+                #Imageslider img{
+                    width:100%;
+                }
+                #navbars a{
+                    font-size: 20px;
+                    display: inline;
+                    padding-left: 30px;
+                }
+                #searchView{
+                    position:absolute;
+                    right: 38%;
+                }
+                #searchView input{
+                    width:200px;
+                    font-size: 14px;
+                }
+                .dropdown{
+                  float:right;
+                  margin-right: -25%;
+                }
+                #droper{
+                    position:absolute;
+                    left: 72%;
+                    top: 14%;
+                }
+                #service{
+                    width: 100px;
+                    position: absolute;
+                    left: 30%;
+                    background-color: #ddd;
+                    padding: 5px;
+                }
+                #about{
+                    width: 100px;
+                    position: absolute;
+                    left: 45%;
+                    background-color: #ddd;
+                    padding: 5px;
+                }
+                #staff{
+                    width: 100px;
+                    position: absolute;
+                    left: 58%;
+                    background-color: #ddd;
+                    padding: 5px;
+                }
+                #contact{
+                    width: 100px;
+                    position: absolute;
+                    left: 72%;
+                    background-color: #ddd;
+                    padding: 5px;
+                }
+                #prev{
+                    position:absolute;
+                    top: 38%;
+                }
+                #next{
+                    position:absolute;
+                    top: 38%;
+                }
+                footer{
+                    display:none;
+                }
+            }
+                @media(max-width:360px){
+                .drop0{
+                    display: none;
+                }
+                .drop1, .drop2, .drop3, .drop4{
+                    padding: 1px;
+                    width:5%;
+                }
+                .drop1:hover{
+                    color: blue;
+                }
+                footer{
+                        display: none;
+                    }
+                #registration{
+                    margin-left: -20%;
+                    margin-top: 20%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #registration input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #registration select{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #myform p{
+                    font-size: 18px;
+                }
+                #myform{
+                    margin-left: -20%;
+                    margin-top: 20%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #myform input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #droper{
+                    padding: 5px;
+                    margin-left: -30%;
+                    font-size: 18px;
+                    margin-top: 45%;
+                }
+                #droper a{
+                    font-size: 18px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                .next, .prev{
+                    margin-top: 30%;
+                }
+                #Imageslider img{
+                    width: 100%;
+                }
+                #Imageslider{
+                    margin-top: 28%;
+                    width: 100%;
+                }
+                header img{
+                    width: 100%;
+                }
+                header form{
+                    display: none;
+                }
+                #drop_menu{
+                    padding: 5px;
+                    color: #FFFFFF;
+                    display: none;
+                    font-size: 20px;
+                }
+                .dropdown{
+                    margin-top: -29%;
+                    margin-right: -28%;
+                    right: 0%;
+                    padding: 0px;
+                    width: 400px;
+                    position: absolute;
+                }
+                #navbars{
+                    width: 100%;
+                    position:absolute;
+                    top: 16%;
+                    background-color: blue;
+                }
+                #navbars a{
+                    display: inline;
+                    padding-left: 8px;
+                }
+                #drop0,#drop1,#drop2,#drop3,#drop4{
+                    text-align: center;
+                    display: inline;
+                    padding-left: 10px;
+                    width: 2%;
+                    text-align: center;
+                    width: 0px;
+                    font-size: 12px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #FFFFFF;
+                }
+                .show{
+                    color: inherit;
+                    background-color: inherit;
+                    display: none;
+                    border: none;
+                }
+                .active{
+                    display: block;
+                }
+                #service{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 36%;
+                    left: 18%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #service a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #contact{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 36%;
+                    left: 70%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #contact a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #about{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 36%;
+                    left: 40%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #about a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #staff{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 36%;
+                    left: 55%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #staff a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #next{
+                    right: 0%;
+                }
+                #prev{
+                    left: 6%;
+                }
+                #staff_login{
+                    position:absolute;
+                    left:1%;
+                    top: 40%;
+                    width:350px;
+                    background-color: #ddd;
+                }
+                #staff_login input{
+                    width: 200px;
+                }
+            }
+            @media(max-width:412px){
+                #staff_login{
+                    position:absolute;
+                    left:7%;
+                    top: 40%;
+                    width:350px;
+                    background-color: #ddd;
+                }
+                #staff_login input{
+                    width: 200px;
+                }
+                .drop0{
+                    display: none;
+                }
+                .drop1, .drop2, .drop3, .drop4{
+                    padding: 1px;
+                    width:5%;
+                }
+                .drop1:hover{
+                    color: blue;
+                }
+                footer{
+                        display: none;
+                    }
+                #registration{
+                    margin-left: -20%;
+                    margin-top: 20%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #registration input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #registration select{
+                    width: 200px;
+                    padding: 5px;
+                }
+                #myform p{
+                    font-size: 18px;
+                }
+                #myform{
+                    margin-left: -20%;
+                    margin-top: 20%;
+                    width: 300px;
+                    background-size: cover;
+                }
+                #myform input{
+                    width: 200px;
+                    padding: 5px;
+                }
+                .drop{
+                    padding: 5px;
+                    margin-left: -30%;
+                    font-size: 18px;
+                    display:none;
+                    margin-top: -5%;
+                }
+                .drop a{
+                    font-size: 18px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                .next, .prev{
+                    margin-top: 35%;
+                }
+                #Imageslider img{
+                    width: 100%;
+                }
+                #Imageslider{
+                    margin-top: 28%;
+                    width: 100%;
+                }
+                header img{
+                    width: 100%;
+                }
+                header form{
+                    display: none;
+                }
+                #drop_menu{
+                    padding: 5px;
+                    color: #FFFFFF;
+                    display: none;
+                    font-size: 20px;
+                }
+                .dropdown{
+                    margin-top: -42%;
+                    margin-right: -28%;
+                    right: 0%;
+                    padding: 0px;
+                    width: 415px;
+                    position: absolute;
+                }
+                #droper{
+                    position: absolute;
+                    top: 13%;
+                    left: 55%;
+                    padding: 5px;
+                }
+                #droper a{
+                    font-size: 16px;
+                }
+                #navbars{
+                    width: 100%;
+                    position:absolute;
+                    top: 12%;
+                    background-color: blue;
+                }
+                #navbars a{
+                    font-size: 12px;
+                    display: inline;
+                    color: #FFFFFF;
+                    padding-left: 10px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                /*#drop0,#drop1,#drop2,#drop3,#drop4{
+                    text-align: center;
+                    display: inline;
+                    padding-left: 10px;
+                    width: 2%;
+                    text-align: center;
+                    width: 0px;
+                    font-size: 12px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #FFFFFF;
+                }*/
+                .show{
+                    color: inherit;
+                    background-color: inherit;
+                    display: none;
+                    border: none;
+                }
+                .active{
+                    display: block;
+                }
+                #service{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 34%;
+                    left: 18%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #service a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #contact{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 34%;
+                    left: 70%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #contact a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #about{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 34%;
+                    left: 40%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #about a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #staff{
+                    background-color: #ddd;
+                    position: absolute;
+                    top: 34%;
+                    left: 55%;
+                    width: 100px;
+                    padding: 5px;
+                }
+                #staff a{
+                    font-size: 16px;
+                    color: #333;
+                }
+                #next{
+                    right: 0%;
+                }
+                #prev{
+                    left: 6%;
+                }
+            }
+            </style>
+            <script>
+                var my_show=document.querySelector('#drop_menu');
+                var dataHolder=document.querySelector('#navbars');
+                my_show.addEventListener('click', function(){
+                    dataHolder.classList.toggle('active');
+                });
+            </script>
+        </center>
+            <div class="sub-navbars">
+                <div class="service" id="service">
+                    <a href="generalService.html">General</a><hr>
+                    <a href="comment.html">Comment</a>
+                </div>
+                <div class="staff" id="staff">
+                    <a href="#" class="staffLogin">Login</a>
+                    <script>
+                        var button2=document.querySelector('.drop3');
+                        var holder=document.querySelector('.staff');
+                        button2.addEventListener('click',function(){
+                            holder.classList.toggle('active');
+                        });
+                    </script>
+                </div>
+                <div class="contact" id="contact">
+                    <a href="#">Staff</a><hr>
+                    <a href="#">Manager</a>
+                    <script>
+                        button3=document.querySelector('.drop4');
+                        holder2=document.querySelector('.contact');
+                        button3.addEventListener('click',function(){
+                            holder2.classList.toggle('active');
+                        });
+                    </script>
+                </div>
+                <div class="about" id="about">
+                    <a href="history.html">History</a>
+                    <!--<a href="#">Organization</a>-->
+                    <script>
+                        var button3=document.querySelector('.drop2');
+                        var holder3=document.querySelector('.about');
+                        button3.addEventListener('click',function(){
+                            holder3.classList.toggle('active');
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+            <style>
+                .drop2{
+                    text-decoration: none;
+                }
+                .about{
+                    position: absolute;
+                    left: 47%;
+                    display: none;
+                    padding: 10px;
+                    background-color: #ddd;
+                    width: 10%;
+                }
+                .about a{
+                    font-size: 18px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px;
+                }
+                .drop4{
+                    text-decoration: none;
+                }
+                .contact{
+                    display: none;
+                    position: absolute;
+                    left: 65%;
+                    padding: 10px;
+                    background-color: #ddd;
+                    width: 10%;
+                }
+                .contact a{
+                    padding: 5px;
+                    display: block;
+                    font-size: 18px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    text-decoration: none;
+                }
+                .drop2{
+                    text-decoration: none;
+                }
+                .staff{
+                    display: none;
+                    position: absolute;
+                    left: 56%;
+                    width: 10%;
+                    background-color: #ddd;
+                    padding: 10px;
+                }
+                .staff a{
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 18px;
+                    text-decoration: none;
+
+                    display: block;
+                }
+                .drop1{
+                    text-decoration: none;
+                }
+                .drop1:hover .service{
+                    display: block;
+                }
+                .service{
+                    background-color: #ddd;
+                    position: absolute;
+                    left: 37%;
+                    display: none;
+                    width: 10%;
+                    padding: 15px;
+                }
+                .active{
+                    display: block;
+                }
+                .service a{
+                    font-size: 18px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    padding: 10px;
+                    text-decoration: none;
+                    display: block;
+                }
+                
+                .navbars{
+                    background-color: blue;
+                    width: 70%;
+                    padding: 20px;
+                }
+                .navbars a:hover{
+                    color: orange;
+                }
+                .navbars a{
+                    color: black;
+                    display: inline;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    padding-left: 60px;
+                }
+                .show{
+                        position: absolute;
+                        left: 10%;
+                        top: 20%;
+                        color: #FFFFFF;
+                        background-color: inherit;
+                        border: none;
+                    }
+                    .active{
+                        display: block;
+                    }
+            </style>
+            <script>
+                var buttonHolder=document.querySelector('.show');
+                var valueHolder=document.querySelector('.navbars');
+                buttonHolder.addEventListener('click', function(){
+                    valueHolder.classList.toggle('active');
+                });
+            </script>
+            <script>
+                var button1=document.querySelector('.drop1');
+                var container1=document.querySelector('.service');
+                button1.addEventListener('click',function(){
+                    container1.classList.toggle('active');
+                });
+            </script>
+        </center>
+        <style>
+            /*.sub-container1 button{
+                float: left;
+                padding: 10px;
+                text-align: left;
+                font-size: 20px;
+                width: 310px;
+            }
+            .sub-container1{
+                margin-left: 10%;
+                float: left;
+                background-color: #ddd;
+                width: 20%;
+            }*/
+           /* .container{
+                border: 1px solid black;
+                width: 100%;
+            }*/
+            .Imageslider{
+                cursor: pointer;
+                border: 1px solid black;
+                width: 70%;
+                height: 600px;
+                overflow: hidden;
+            }
+            .Imageslider img{
+                top: 23%;
+                width: 100%;
+                height: 600px;
+            }
+            .container button:hover{
+                color: blue;
+            }
+            .container button{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                font-size: 50px;
+                border: none;
+                background-color: inherit;
+            }
+            .container .prev{
+                left: 20%;
+            }
+            .container .next{
+                left: 78%;
+            }
+        </style>
+        <center>
+            <div class="container">
+                <!--<div class="sub-container1">
+                    <button>Hardware</button>
+
+                </div>-->
+                <div class="Imageslider" id="Imageslider">
+                    <!--<img src="images/1.jpg" alt="My Image">-->
+                    <img src="images/IMG/1.jpg" alt="My Image">
+                    <img src="images/IMG/2.jpg" alt="My Image">
+                    <img src="images/IMG/3.jpg" alt="My Image">
+                    <img src="images/IMG/4.jpg" alt="My Image">
+                    <img src="images/IMG/5.jpg" alt="My Image">
+                    <img src="images/IMG/6.jpg" alt="My Image">
+                    <img src="images/IMG/7.jpg" alt="My Image">
+                    <img src="images/IMG/8.jpg" alt="My Image">
+                    <!--<img src="images/10.jpg" alt="My Image">-->
+                    <script>
+                        const imageSlides=document.querySelectorAll('.Imageslider img');
+                        const intervalTime=4000;
+                        let initialImage=0;
+                        //function to show next image
+                        function showNextImage(){
+                            imageSlides[initialImage].style.display='none';
+                            initialImage++;
+                            if(initialImage>=imageSlides.length){
+                                initialImage=0;
+                            }
+                            //show next image
+                            imageSlides[initialImage].style.display='block';
+                        }
+                        //set time interval
+                        setInterval(showNextImage,intervalTime);
+                    </script>
+                </div>
+                <div class="control_button">
+                <button class="prev" onclick="changeSlide(-1)" id="prev">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)" id="next">&#10095;</button>
+            </div>
+                <script>
+                    var images=document.querySelectorAll('.Imageslider img');
+                    let currentIndex=0;
+                    //function to show next image
+                    function showNextImage(index){
+                        //hide all images
+                        images.forEach(function showNextImage(image){
+                            image.style.display='none';
+                        });
+                        //show image in the specific index
+                        images[index].style.display='block';
+                    }
+                    //function to change image with button controls
+                    function changeSlide(offset){
+                        //calculate new index
+                        var newIndex=currentIndex+offset;
+                        //wrap around if newIndex exceeds images length
+                        if(newIndex<0){
+                            newIndex=images.length-1;
+                        }else if(newIndex>=images.length){
+                            newIndex=0;
+                        }
+                        //show next image
+                        showNextImage(newIndex);
+                        //update current index
+                        currentIndex=newIndex;
+                    }
+                    //show initial image
+                    showNextImage(currentIndex);
+                </script>
+            </div>
+        </center>
+        <center>
+        <div class="login" id="myform" >
+            <form action="customer_login.php" class="myform" method="post">
+                <p>Customers Login Dashboard</p><br>
+                <input type="email" name="email" id="uname" placeholder="Enter email" required><br><br>
+                <input type="password" name="password" id="pass" placeholder="Enter password" required><br><br>
+                <button type="submit">Sign in</button>
+            </form>
+            <style>
+                .login form button{
+                    width: 100px;
+                    padding: 10px;
+                }
+                .login form p{
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 20px;
+                }
+                .login{
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    display: none;
+                    cursor: pointer;
+                    border: 1px solid black;
+                    width: 40%;
+                    background-color: #ddd;
+                    padding: 10px;
+                }
+                .login form input{
+                    padding: 20px;
+                    width: 400px;
+                }
+                .user-login{
+                    text-decoration: none;
+                }
+                .active{
+                    display: block;
+                }
+            </style>
+            <script>
+                var buttonLogin=document.querySelector('.user-login');
+                var LoginForm=document.querySelector('.login');
+                //add button event listener
+                buttonLogin.addEventListener('click', function(){
+                    LoginForm.classList.toggle('active');
+                });
+            </script>
+        </div>
+        <div class="registration" id="registration">
+            <div class="para">  
+            <p>Customer registration dashboard</p>
+        </div>
+        <form action="customer_register.php" method="post">
+            <label for="contact">Phone Number</label><br>
+            <input type="number" name="contact" id="phoneNumber" placeholder="Enter phone number" required><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter email" required><br><br>
+            <label for="gender">Gender</label><br>
+            <select name="gender" id="ender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="nationality">Nationality</label><br>
+            <input type="text" name="nationality" id="nationality" placeholder="Enter your nationality" required><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="pass" placeholder="Enter password" required><br><br>
+            <label for="confirm pass">Confirm Password</label><br>
+            <input type="password" name="password1" id="pass1" placeholder="Confirm your password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <style>
+            .active{
+                display: block;
+            }
+            .registration form button:hover{
+                background-color: blue;
+                color: #FFFFFF;
+            }
+            .registration .para:hover{
+                color: #FFFFFF;
+            }
+            .registration form button{
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 15px;
+                width: 100px;
+            }
+            .registration .para{
+                background-color: blue;
+                padding: 15px;
+                font-size: 20px;
+            }
+            .registration form{
+                padding: 20px;
+            }
+            .registration{
+                display: none;
+                position: absolute;
+                top: 25%;
+                left: 30%;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-color:#ddd;
+                width:40%
+            }
+            .registration form label{
+                text-align: center;
+
+            }
+            .registration form select{
+                padding: 20px;
+                width: 400px;
+            }
+            .registration form input{
+                padding: 20px;
+                width: 400px;
+            }
+            .active{
+                display: block;
+            }
+        </style>
+        <script>
+            var button_user=document.querySelector('.user-registration');
+            var holder4=document.querySelector('.registration');
+            button_user.addEventListener('click', function(){
+                holder4.classList.toggle('active');
+            });
+        </script>
+        </div>
+    </center>
+    <style>
+        .sub-footer1,.sub-footer2,.sub-footer3{
+            padding-left: 40px;
+        }
+        footer .sub-footer1{
+        float: left;
+        }
+        footer .sub-footer2{
+            float: left;
+            margin-left: 25%;
+        }
+        footer .sub-footer3{
+            float: left;
+            margin-left: 28%;
+        }
+        footer{
+            cursor: pointer;
+            border: 1px solid rgb(58, 206, 179);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #ddd;
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+        }
+        footer:hover{
+            background-color: orange;
+            color: #FFFFFF;
+        }
+        #copy{
+            padding: 20px;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style><br>
+    <center>
+    <footer>
+        <div class="sub-footer1">
+            <h2>Location</h2>
+            <p>Dar Es Salaam, Kigamboni</p>
+        </div>
+        <center>
+        <div class="sub-footer2">
+            <h2>Email Address</h2>
+            <p>mossess608@gmail.com</p>
+        </div>
+        </center>
+        <div class="sub-footer3">
+            <h2>+255768272955</h2>
+            <p>Call Us</p>
+        </div>
+    </footer>
+    <p id="copy">Copyright &copy; 2023, All rights reserved</p>
+    </center>
+    <center>
+        <div class="staff-login-form" id="staff_login">
+            <div class="parag">
+                <p>Staff Login Dashboard</p>
+            </div>
+            <form action="admin.php" method="post">
+                <input type="text" name="username" id="uname" placeholder="Enter username" required><br><br>
+                <input type="password" name="password" id="pass" placeholder="Enter password" required><br><br>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+        <style>
+            .staff-login-form{
+                display: none;
+                position: absolute;
+                top: 25%;
+                left: 35%;
+                background-color: #ddd;
+                width: 30%;
+                cursor: pointer;
+            }
+            .staff-login-form .parag{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 18px;
+                background-color: blue;
+                padding: 15px;
+            }
+            .staff-login-form form{
+                padding: 15px;
+            }
+            .staff-login-form form input{
+                padding: 15px;
+                width:400px
+            }
+            .staff-login-form form button{
+                padding: 10px;
+                width: 100px;
+            }
+            .active{
+                display: block;
+            }
+        </style>
+        <script>
+            var staff_login=document.querySelector('.staffLogin');
+            var holder5=document.querySelector('.staff-login-form');
+            staff_login.addEventListener('click', function(){
+                holder5.classList.toggle('active');
+            });
+        </script>
+    </center>
+</body>
+</html>
